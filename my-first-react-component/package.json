@@ -1,0 +1,18 @@
+{
+  "name": "react-demo",
+  "main": "myFirstReactComponent.js",
+  "dependencies": {
+    "browserify": "9.0.7",
+    "reactify": "1.1.0",
+    "watchify": "3.1.0",
+    "jsxhint": "0.14.0",
+    "underscore": "1.8.3",
+    "jquery": "1.11.2",
+    "react": "0.13.1"
+  },
+  "scripts": {
+    "build" : "node_modules/.bin/browserify --transform reactify scripts/myFirstReactComponent.jsx --extension .jsx --outfile build/my-first-react-component.js",
+    "watch" : "node_modules/.bin/watchify --transform reactify scripts/myFirstReactComponent.jsx --extension .jsx --outfile build/my-first-react-component.js --verbose --poll",
+    "lint" : "node_modules/.bin/jsxhint --jsx-only scripts/*.js scripts/*.jsx"
+  }
+}
